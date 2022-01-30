@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GadgetStore</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<style>
+    /* Internal CSS */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    html{
+        scroll-behavior: smooth;            /* Scrolling Smooth */
+    }
+
+    a{
+        text-decoration: none;
+    }
+</style>
+<body>
+    <!-- Header -->
+    <section id="top"></section>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Gadget<span>Store</span></a>
+        <div class="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="cart-btn btn" id="showcart-btn">
+            Cart
+        </button>
+    </nav>
+
+    <div id="cart" class="cart-popup hide">         <!-- Inline CSS -->
+        <div class="cart-popup-content">
+            <div class="cart-popup-header">
+                <h3>Cart</h3>
+                <button class="btn" id="cart-close" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-popup-body">
+                <div class="cart-popup-body-content">
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/AC.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>Product Name</h4>
+                            <p>$100</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/earpods.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>Product Name</h4>
+                            <p>$100</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Main -->
+    <main>
+        <!-- // Page Container-->
+        <div class="page-container">
+            <!-- // Page Content -->
+            <div class="page-content">
+                <!-- // Page Content Header -->
+                <div class="page-content-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Products</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Page Content Header -->
+
+                <!-- // Page Content Body -->
+                <div class="page-content-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="product-grid">
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/trimmer.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Trimmer</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/earpods.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Earpods</h4>
+                                            <p>$150</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/AC.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>AC</h4>
+                                            <p>$1000</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/keyboard.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Keyboard</h4>
+                                            <p>$80</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/vaccumcleaner.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Vaccum Cleaners</h4>
+                                            <p>$900</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/phone4.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>One Plus</h4>
+                                            <p>$800</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/macbook.png" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Macbook</h4>
+                                            <p>$1500</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/mousepad.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Mousepad</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/heater.webp" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Heater</h4>
+                                            <p>$100</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/headphone.jfif" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Headphone</h4>
+                                            <p>$300</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/phone2.jfif" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Iphone 10</h4>
+                                            <p>$1000</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/mouse.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>RGB Mouse</h4>
+                                            <p>$80</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Load More -->
+                            <div class="load-more">
+                                <button class="btn-load-more" type="button"  id="more-products">
+                                    Load More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Page Content Body -->
+            </div>
+            <!-- // Page Content -->
+        </div>
+        <!-- // Page Container -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; GadgetStore 2020</p>
+            </div>
+            <!-- Internal Linking -->
+            <div class="gototop"><a href="#top"><div class="btn">Go To Top</div></a></div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+        /* Internal JS */
+
+        // Cart Element
+        const cart = document.getElementById("cart");
+        const cartOpen = document.getElementById("showcart-btn");
+        const cartClose = document.getElementById("cart-close");
+        // Cart Open
+        function showcart() {
+            cart.classList.remove("hide");
+        }
+        cartOpen.addEventListener("click", showcart);
+
+        // Cart Close
+        function closecart() {
+            cart.classList.add("hide");
+        }
+        cartClose.addEventListener("click", closecart);
+    </script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
